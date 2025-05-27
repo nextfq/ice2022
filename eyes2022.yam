@@ -26,7 +26,7 @@ jobs:
         run: pip install pyinstaller
 
       - name: Package with PyInstaller
-        run: pyinstaller --onefile monkey.py --name your_app
+        run: pyinstaller --onefile sun2022.py --name sun2022
 
       - name: Upload Executable to GitHub Release
         uses: softprops/action-gh-release@v2
