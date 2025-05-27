@@ -1,4 +1,4 @@
-name: air2023
+name: Earth2022
 on:
   workflow_dispatch:
 
