@@ -3,6 +3,8 @@ on:
   workflow_dispatch:
 jobs:
   build:
+    name: Build Executable
+    runs-on: windows-latest  # 使用 Windows runner，以便打包為 .exe
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
