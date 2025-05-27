@@ -1,4 +1,7 @@
 import requests
+import sys
+import io
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 from bs4 import BeautifulSoup
 # 設定目標網址格式
 base_url = "https://www.tradingview.com/news-flow/"
@@ -34,7 +37,7 @@ for category in categories:
 # 輸出結果
     if search_results:
         for result in search_results:
-          print(f"[{category}] 找到: {result.strip()}")
+          print(f"[{category}] and: {result.strip()}")
     else:
         print(f"[{category}] Still Fail ...")
     print("=" * 95)  # 分隔線
