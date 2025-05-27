@@ -1,7 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 # 設定目標網址格式
-base_url = "https://news.cnyes.com/news/cat/all"
+base_url = "https://www.tradingview.com/news-flow/"
+# base_url = "https://news.cnyes.com/news/cat/all"
 # 定義分類
 categories = [
     "activitiesCategory/theme-Luxury",
@@ -29,7 +30,7 @@ for category in categories:
      # 解析 HTML
     soup = BeautifulSoup(response.text,"html.parser")
      # 找
-    search_results = soup.find_all(string=lambda text: "輝" in text if text else False)
+    search_results = soup.find_all(string=lambda text: "worth" in text if text else False)
 # 輸出結果
     if search_results:
         for result in search_results:
