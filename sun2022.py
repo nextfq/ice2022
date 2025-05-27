@@ -25,7 +25,7 @@ for category in categories:
       response=requests.get(url,headers=headers,timeout=10)
       response.raise_for_status() # 檢查請求是否成功
     except requests.exceptions.RequestException as e:
-        print(f"⚠️ Fail ...", e)
+        print(f"Fail Again ...", e)
         continue# 跳過當前分類，進入下一個分類
      # 解析 HTML
     soup = BeautifulSoup(response.text,"html.parser")
@@ -36,5 +36,5 @@ for category in categories:
         for result in search_results:
           print(f"[{category}] 找到: {result.strip()}")
     else:
-        print(f"[{category}] ❌ Still Fail ...")
+        print(f"[{category}] Still Fail ...")
     print("=" * 95)  # 分隔線
