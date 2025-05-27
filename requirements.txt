@@ -1,0 +1,6 @@
+requests    
+beautifulsoup4    
+bs4    
+lxml    
+openai 
+gunicorn 
