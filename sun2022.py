@@ -33,7 +33,7 @@ for category in categories:
      # 解析 HTML
     soup = BeautifulSoup(response.text,"html.parser")
      # 找
-    search_results = soup.find_all(string=lambda text: "8" in text if text else False)
+    search_results = soup.find_all(string=lambda text: "in" in text if text else False)
 # 輸出結果
     if search_results:
         for result in search_results:
