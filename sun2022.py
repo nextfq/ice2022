@@ -4,7 +4,7 @@ import io
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 from bs4 import BeautifulSoup
 # 設定目標網址格式
-base_url = "https://www.tradingview.com/news-flow/"
+base_url = "https://www.nbcnews.com/archive/articles/last-seven-days"
 # base_url = "https://news.cnyes.com/news/cat/all"
 # 定義分類
 categories = [
