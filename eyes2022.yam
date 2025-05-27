@@ -1,3 +1,13 @@
+name: eye2022
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Person to greet'
+        required: true
+        default: 'World'
+
+
 jobs:
   build:
     name: Build Executable
