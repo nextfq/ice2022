@@ -1,0 +1,20 @@
+name: Earth2023
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    name: Build Executable
+    runs-on: windows-latest  # 使用 Windows runner，以便打包為 .exe
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'  # 
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: python tiger
+        run: python sun2023.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
